@@ -32,36 +32,36 @@ To help you get started, here's a simple example demonstrating the usage of the 
 #include <Anomalia.h>
 
 // Define an instance of the Anomalia class
-Anomalia anomaly;
+Anomalia anomalia;
 
 // Event condition function
-bool myCondition() {
+bool my_condition() {
     // Implement your condition logic here
 }
 
 // Event value function
-void* myValue() {
+void* my_value() {
     // Implement your value retrieval logic here
 }
 
 // Pre-event function
-void myPreEvent(bool returned_value) {
+void my_pre_event(bool returned_value) {
     // Implement your pre-event logic here
 }
 
 // Event function
-void myEvent(void* value) {
+void my_event(void* value) {
     // Implement your event logic here
 }
 
 void setup() {
     // Register the event with its associated functions
-    anomaly.listen(myCondition, myValue, myPreEvent, myEvent);
+    anomalia.listen(my_condition, my_value, my_pre_event, my_event);
 }
 
 void loop() {
     // Check for events and execute actions
-    anomaly.check();
+    anomalia.check();
 }
 ```
 
