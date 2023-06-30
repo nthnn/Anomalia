@@ -21,8 +21,12 @@ class Anomalia {
     void clear();
     void check();
 
-    void listen(bool (*condition)(), void* (*value)(), void (*pre_event)(bool returned_value), void (*event)(void* value));
     void listen(AnomaliaEvent event);
+    void listen(
+        bool (*condition)(),
+        void* (*value)(),
+        void (*pre_event)(bool returned_value),
+        void (*event)(void* value));
 
     private:
     List<AnomaliaEvent> events;
